@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="scripts/index.js"></script>
+</head>
+<body class="flex-col h-screen flex">
+<header class="bg-cyan-400 mb-16">
+    <div class="container mx-auto">
+        <h1 class="text-5xl text-center py-2.5">Список дел</h1>
+    </div>
+</header>
+<main class="min-h-full">
+    <section class="mb-16">
+        <div class="container mx-auto">
+            <form class="max-w-sm form mb-2.5">
+                <div class="w-big flex items-center border-b border-teal-500 py-2">
+                    <label >
+                        <input name="task" placeholder="Новыя задача" class="input w-input appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text">
+                    </label>
+                    <button data-type="add" name="btn" class="btn ml-auto flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">Добавить</button>
+                </div>
+            </form>
+            <div class="flex">
+                <p class="text"></p>
+                <button disabled data-type="editor" name="btn" class="bg-cyan-950 block btn replace__btn ml-auto flex-shrink-0 border-teal-500  text-sm border-4 text-white py-1 px-2 rounded" type="submit">Редактировать</button>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mx-auto">
+            <ul class="task__List"></ul>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-cyan-400 min-h-16">
+    <div class="container mx-auto">
+        <p class="text-center translate-y-9">&copy; Copyright ToDo List</p>
+    </div>
+</footer>
+</body>
+</html>
